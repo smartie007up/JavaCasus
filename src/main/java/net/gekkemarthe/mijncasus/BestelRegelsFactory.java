@@ -16,7 +16,6 @@ public class BestelRegelsFactory {
         try {
             ReadInFile readInFile = new ReadInFile();
             input = readInFile.getBestelregels();
-            System.out.println(input.get(0));
             for (int i = 0; i < input.size(); i++) {
                 String temp = input.get(i);
                 temp = temp.replaceAll("\"", "");

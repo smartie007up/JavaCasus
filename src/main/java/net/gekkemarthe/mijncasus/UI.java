@@ -1,6 +1,5 @@
 package net.gekkemarthe.mijncasus;
 
-import javax.swing.text.View;
 import java.util.Scanner;
 
 public class UI {
@@ -14,38 +13,40 @@ public class UI {
     ViewBestellingen viewBestellingen;
     ViewPlanten viewPlanten;
 
-    UI ui;
+//    UI ui;
 
-    UI ()
-    {
+    UI() {
         bedrijfsNaam = "Plantenlust";
         viewLeveranciers = new ViewLeveranciers();
         viewBestellingen = new ViewBestellingen();
         viewBestelRegels = new ViewBestelRegels();
         viewPlanten = new ViewPlanten();
-        ui = new UI();
+//        ui = new UI();
     }
 
-    public void start () {
+    public void start() {
         System.out.printf("\n");
         System.out.printf("******* Welkom bij tuincentrum %s ******* \n", bedrijfsNaam);
 
+        UI ui = new UI();
         ui.sc = new Scanner(System.in);
 
         Boolean runProgram = true;
 
         ui.toonHoofdMenu();
 
-        while(runProgram)
-        {
+        while (runProgram) {
             ui.invoer = ui.sc.nextLine();
             int keuze = Integer.parseInt(ui.invoer);
 
-            switch (keuze){
+            switch (keuze) {
                 case 1:
                     leverancierMenu();
 
-                    bestellingMenu();
+                    System.out.println(" Van welke Leverancier wilt u de bestellingen zien? ");
+                    System.out.printf(" Typ de juiste leveranciercode in: \n");
+                    ui.invoer = ui.sc.nextLine();
+                    keuze = Integer.parseInt(ui.invoer);
 
                     viewBestellingen.toonBestellingen(keuze);
                     String gekozenLeverancierCode = "Leveranciercode = " + keuze;
@@ -85,8 +86,7 @@ public class UI {
         ui.sc.close();
     }
 
-    public void toonHoofdMenu()
-    {
+    public void toonHoofdMenu() {
         System.out.printf("\n");
         System.out.printf("******************* Hoofd Menu ******************* \n");
         System.out.printf("\n");
@@ -102,22 +102,7 @@ public class UI {
         System.out.printf("Uw keuze: ");
     }
 
-    public void leverancierMenu ()
-    {
+    public void leverancierMenu() {
         viewLeveranciers.toonLeveranciers();
-    }
-
-    public void bestellingMenu ()
-    {
-        ui.invoer = ui.sc.nextLine();
-        System.out.println(" Van welke Leverancier wilt u de bestellingen zien? ");
-        System.out.printf(" Typ de juiste leveranciercode in: \n");
-        int keuze = Integer.parseInt(ui.invoer);
-    }
-
-    public void bestelRegelMenu ()
-    {
-        ui.invoer = ui.sc.nextLine();
-        int keuze = Integer.parseInt(ui.invoer);
     }
 }

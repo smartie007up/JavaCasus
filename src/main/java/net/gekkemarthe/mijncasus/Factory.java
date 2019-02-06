@@ -15,7 +15,7 @@ public class Factory {
         try {
             ReadInFile readInFile = new ReadInFile();
             input = readInFile.getInputFile("bestellingen");
-            System.out.println("TADAAAAAAAA" + input);
+//            System.out.println("TADAAAAAAAA" + input);
 
         } catch (IOException e) {
             System.out.println("Leveranciers could not be loaded.");
