@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class UI {
 
     String bedrijfsNaam;
-    String invoer;
     Scanner sc;
+
+    int[] keuzes;
 
     ViewLeveranciers viewLeveranciers;
     ViewBestelRegels viewBestelRegels;
     ViewBestellingen viewBestellingen;
     ViewPlanten viewPlanten;
-
-//    UI ui;
 
     UI() {
         bedrijfsNaam = "Plantenlust";
@@ -21,7 +20,7 @@ public class UI {
         viewBestellingen = new ViewBestellingen();
         viewBestelRegels = new ViewBestelRegels();
         viewPlanten = new ViewPlanten();
-//        ui = new UI();
+        keuzes = new int[4];
     }
 
     public void start() {
@@ -29,61 +28,53 @@ public class UI {
         System.out.printf("******* Welkom bij tuincentrum %s ******* \n", bedrijfsNaam);
 
         UI ui = new UI();
-        ui.sc = new Scanner(System.in);
 
         Boolean runProgram = true;
-
-        ui.toonHoofdMenu();
+        toonHoofdMenu();
 
         while (runProgram) {
-            ui.invoer = ui.sc.nextLine();
-            int keuze = Integer.parseInt(ui.invoer);
+            int invoer = invoerKeuze();
 
-            switch (keuze) {
+            switch (invoer) {
                 case 1:
                     leverancierMenu();
 
-                    System.out.println(" Van welke Leverancier wilt u de bestellingen zien? ");
-                    System.out.printf(" Typ de juiste leveranciercode in: \n");
-                    ui.invoer = ui.sc.nextLine();
-                    keuze = Integer.parseInt(ui.invoer);
+                    bestellingenMenu();
+                    System.out.println("Leveranciercode = " + keuzes[0]);
 
-                    viewBestellingen.toonBestellingen(keuze);
-                    String gekozenLeverancierCode = "Leveranciercode = " + keuze;
-                    System.out.println(gekozenLeverancierCode);
-                    System.out.println(" Van welke Bestelling wilt u de bestelregels zien? ");
-                    System.out.printf(" Typ het juiste bestelnummer in: \n");
-                    ui.invoer = ui.sc.nextLine();
-                    keuze = Integer.parseInt(ui.invoer);
+                    bestelRegelsMenu();
+                    System.out.println("Leveranciercode = " + keuzes[0] + ", " + "Bestelnummer = " + keuzes[1]);
 
-                    viewBestelRegels.toonBestelRegels(keuze);
-                    String gekozenBestelNummer = "Bestelnummer = " + keuze;
-                    System.out.println(gekozenLeverancierCode + ", " + gekozenBestelNummer);
-                    System.out.println(" Van welke Bestelregel wilt u de planten uit de bestelling zien? ");
-                    System.out.printf(" Typ de juiste artikelcode in: \n");
-                    ui.invoer = ui.sc.nextLine();
-                    keuze = Integer.parseInt(ui.invoer);
+                    plantenMenu();
+                    System.out.println("Leveranciercode = " + keuzes[0] + ", " + "Bestelnummer = " + keuzes[1] + ", " + "Artikelcode = " + keuzes[2]);
 
-                    viewPlanten.toonPlanten(keuze);
-                    String gekozenArtikelCode = "Artikelcode = " + keuze;
-                    System.out.println(gekozenLeverancierCode + ", " + gekozenBestelNummer + ", " + gekozenArtikelCode);
                     System.out.println(" *** Meer opties zijn er niet *** ");
-                    System.out.println(" *** Terug naar het hoofdmenu? Typ 9 ***");
+                    System.out.println(" *** Terug naar het hoofdmenu? Typ 0 ***");
+                    System.out.println(" *** Of typ 9 om af te sluiten ***");
 
                     break;
                 case 2:
                     ViewAankopen.toonAankopen();
+                    break;
+                case 0:
+                    toonHoofdMenu();
                     break;
                 case 9:
                     runProgram = false;
                     System.out.println("Einde programma");
                     break;
                 default:
-                    System.out.println("Ongeldige keuze");
+                    ongeldigeInvoer();
                     break;
             }
         }
         ui.sc.close();
+    }
+
+    public void ongeldigeInvoer()
+    {
+        System.out.println("Ongeldige keuze");
+        System.out.println("Probeer het nogmaals");
     }
 
     public void toonHoofdMenu() {
@@ -104,5 +95,70 @@ public class UI {
 
     public void leverancierMenu() {
         viewLeveranciers.toonLeveranciers();
+    }
+
+    public void bestellingenMenu() {
+        System.out.println(" Van welke leverancier wilt u de bestellingen zien? ");
+        System.out.printf(" Typ de juiste leveranciercode in: \n");
+
+        int welkeLeverancierCode = invoerKeuze();
+        if(viewBestellingen.isLeeg(welkeLeverancierCode)){
+            System.out.println("De gekozen leverancier heeft geen bestellingen");
+            System.out.println("Probeer het nogmaals.");
+        }
+        else if (viewLeveranciers.magGekozen(welkeLeverancierCode)) {
+            viewBestellingen.toonBestellingen(welkeLeverancierCode);
+            keuzes[0] = welkeLeverancierCode;
+        } else {
+            ongeldigeInvoer();
+            bestellingenMenu();
+        }
+    }
+
+    public void bestelRegelsMenu() {
+        System.out.println(" Van welke bestelling wilt u de bestelregels zien? ");
+        System.out.printf(" Typ het juiste bestelnummer in: \n");
+
+        int welkBestelNummer = invoerKeuze();
+        if(viewBestelRegels.isLeeg(welkBestelNummer)){
+            System.out.println("De gekozen bestelling heeft geen bestelregels");
+            System.out.println("Probeer het nogmaals.");
+        }
+        else if (viewBestellingen.magGekozen(welkBestelNummer)) {
+            viewBestelRegels.toonBestelRegels(welkBestelNummer);
+            keuzes[1] = welkBestelNummer;
+        } else {
+            ongeldigeInvoer();
+            bestelRegelsMenu();
+        }
+    }
+
+    public void plantenMenu() {
+        System.out.println(" Van welke Bestelregel wilt u de planten uit de bestelling zien? ");
+        System.out.printf(" Typ de juiste artikelcode in: \n");
+
+        int welkeArtikelCode = invoerKeuze();
+        if (viewBestelRegels.magGekozen(welkeArtikelCode)) {
+            viewPlanten.toonPlanten(welkeArtikelCode);
+            keuzes[2] = welkeArtikelCode;
+        } else {
+            ongeldigeInvoer();
+            plantenMenu();
+        }
+    }
+
+    public int invoerKeuze (){
+        Scanner scanner = new Scanner(System.in);
+
+        int result;
+        do {
+            while (!scanner.hasNextInt()) {
+                String input = scanner.next();
+                System.out.printf("\"%s\" is geen juiste invoer.\n Probeer het nogmaals.", input);
+            }
+            result = scanner.nextInt();
+        } while (result < 0);
+
+        return result;
     }
 }

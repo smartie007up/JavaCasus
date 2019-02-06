@@ -49,4 +49,14 @@ public class BestelRegelsFactory {
     public ArrayList<BestelRegel> getBestelRegels() {
         return bestelRegels;
     }
+
+    public ArrayList<Integer> getAllArtikelCodes () {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for (int i = 1; i < bestelRegels.size(); i++) {
+            BestelRegel bes = bestelRegels.get(i);
+            int temp = Integer.parseInt(bes.getArtikelCode());
+            result.add(temp);
+        }
+        return result;
+    }
 }

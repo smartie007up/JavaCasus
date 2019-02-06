@@ -1,6 +1,5 @@
 package net.gekkemarthe.mijncasus;
 
-import javax.swing.text.View;
 import java.util.ArrayList;
 
 public class ViewLeveranciers {
@@ -8,11 +7,13 @@ public class ViewLeveranciers {
     private LeveranciersFactory leveranciersFactory;
     private ArrayList<Leverancier> leveranciersList;
     private String kolumNaam1, kolumNaam2, kolumNaam3, kolumNaam4;
+    private ArrayList<Integer> allLeverancierCodes;
 
     ViewLeveranciers ()
     {
         leveranciersFactory = new LeveranciersFactory();
         leveranciersFactory.loadLeveranciers();
+        allLeverancierCodes = leveranciersFactory.getAllLeverancierCodes();
 
         leveranciersList = leveranciersFactory.getLeveranciers();
 
@@ -31,6 +32,15 @@ public class ViewLeveranciers {
             System.out.printf("%-10s %-18s %-25s %-10s \n", lev.getLeverancierCode(), lev.getLeverancierNaam(), lev.getAdres(), lev.getWoonplaats());
         }
         System.out.printf("-------------------------------------------------------------------- \n");
+    }
+
+    public boolean magGekozen(int keuze)
+    {
+        if(allLeverancierCodes.contains(keuze)){
+            return true;
+        }
+        else
+            return false;
     }
 
     public ArrayList<Leverancier> getLeveranciersList() {

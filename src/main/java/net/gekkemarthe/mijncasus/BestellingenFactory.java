@@ -50,4 +50,14 @@ public class BestellingenFactory {
     {
         return bestellingen;
     }
+
+    public ArrayList<Integer> getAllBestelNummers () {
+        ArrayList<Integer> result = new ArrayList<Integer>();
+        for (int i = 1; i < bestellingen.size(); i++) {
+            Bestelling bes = bestellingen.get(i);
+            int temp = Integer.parseInt(bes.getBestelNummer());
+            result.add(temp);
+        }
+        return result;
+    }
 }

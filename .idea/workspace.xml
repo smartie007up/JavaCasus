@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc10eaa6-bc13-4fda-b36f-bf0395c43a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_16_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/casusJava.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestellingenFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestellingenFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bestellingen.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bestellingen.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bestelregels.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bestelregels.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/goed_ontvangst.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/goed_ontvangst.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/klanten.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/klanten.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/leveranciers.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/leveranciers.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestellingen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestellingen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewLeveranciers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewLeveranciers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/BestelRegelsFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/BestelRegelsFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/Factory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/Factory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/BestellingenFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/BestellingenFactory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/UI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/UI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/planten.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/planten.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewBestelRegels.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewBestelRegels.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewBestellingen.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewBestellingen.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewLeveranciers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/net/gekkemarthe/mijncasus/ViewLeveranciers.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +25,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewPlanten.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-203">
+              <caret line="8" column="139" selection-start-line="8" selection-start-column="139" selection-end-line="8" selection-end-column="139" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/PlantenFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
+            <state relative-caret-position="282">
+              <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestellingen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="56" column="5" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -43,26 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+            <state relative-caret-position="830">
+              <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -73,6 +85,8 @@
     <findStrings>
       <find>BESTELNR</find>
       <find>System.out.print</find>
+      <find>leveranciersFactory</find>
+      <find>keuze</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -85,8 +99,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewLeveranciers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestellingenFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestellingen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/PlantenFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewPlanten.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java" />
       </list>
     </option>
@@ -151,7 +171,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549446046635" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549451078973" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -211,12 +231,12 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4957507" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3512748" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -234,20 +254,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="66" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -255,10 +261,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/Leverancier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewLeveranciers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="36" selection-start-column="2" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/LeveranciersFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestellingenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="53" selection-start-column="2" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewPlanten.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-203">
+          <caret line="8" column="139" selection-start-line="8" selection-start-column="139" selection-end-line="8" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/PlantenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/BestelRegelsFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestelRegels.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/ViewBestellingen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/gekkemarthe/mijncasus/UI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
