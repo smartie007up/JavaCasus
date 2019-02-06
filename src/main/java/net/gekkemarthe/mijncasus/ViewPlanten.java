@@ -29,7 +29,8 @@ public class ViewPlanten {
     public void toonPlanten (int keuze)
     {
         gekozenPlantenBijBestelRegel = plantenFactory.getPlantenBijBestelRegel(keuze);
-        //artikelcode
+
+        System.out.println(" ********************* Planten overzicht ********************* \n");
         System.out.printf("%-10s %-15s %-15s %-10s %-10s %-10s %-10s %-10s %-10s %-10s \n", kolomNaam1, kolomNaam2, kolomNaam3, kolomNaam4, kolomNaam5, kolomNaam6, kolomNaam7, kolomNaam8, kolomNaam9, kolomNaam10);
         System.out.printf("---------------------------------------------------------------------------------------------------------------------------------- \n");
 

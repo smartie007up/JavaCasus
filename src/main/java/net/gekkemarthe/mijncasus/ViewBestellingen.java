@@ -24,18 +24,18 @@ public class ViewBestellingen {
         kolomNaam6 = kolomNaam.getStatus();
     }
 
-    public void toonBestellingen(int keuze)
-    {
-            gekozenBestellingenBijLeverancier = bestellingenFactory.getBestellingenVanLeverancier(keuze);
+    public void toonBestellingen(int keuze) {
+        gekozenBestellingenBijLeverancier = bestellingenFactory.getBestellingenVanLeverancier(keuze);
 
-            System.out.printf("%-10s %-10s %-12s %-12s %-8s %-8s\n", kolomNaam1, kolomNaam2, kolomNaam3, kolomNaam4, kolomNaam5, kolomNaam6);
-            System.out.printf("-------------------------------------------------------------------- \n");
+        System.out.println(" ********************* Bestellingen overzicht ********************* \n");
+        System.out.printf("%-10s %-10s %-12s %-12s %-8s %-8s\n", kolomNaam1, kolomNaam2, kolomNaam3, kolomNaam4, kolomNaam5, kolomNaam6);
+        System.out.printf("-------------------------------------------------------------------- \n");
 
-            for (int i = 0; i < gekozenBestellingenBijLeverancier.size(); i++) {
-                Bestelling bes = gekozenBestellingenBijLeverancier.get(i);
-                System.out.printf("%-10s %-10s %-12s %-12s %-8s %-8s\n", bes.getBestelNummer(), bes.getLeverancierCode(), bes.getBestelDatum(), bes.getLeverDatum(), bes.getBedrag(), bes.getStatus());
-            }
-            System.out.printf("-------------------------------------------------------------------- \n");
+        for (int i = 0; i < gekozenBestellingenBijLeverancier.size(); i++) {
+            Bestelling bes = gekozenBestellingenBijLeverancier.get(i);
+            System.out.printf("%-10s %-10s %-12s %-12s %-8s %-8s\n", bes.getBestelNummer(), bes.getLeverancierCode(), bes.getBestelDatum(), bes.getLeverDatum(), bes.getBedrag(), bes.getStatus());
+        }
+        System.out.printf("-------------------------------------------------------------------- \n");
     }
 
     public boolean magGekozen(int keuze)

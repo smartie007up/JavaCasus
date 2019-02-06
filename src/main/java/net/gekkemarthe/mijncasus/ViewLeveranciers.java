@@ -24,6 +24,7 @@ public class ViewLeveranciers {
     }
 
     public void toonLeveranciers(){
+        System.out.println(" ********************* Leveranciers overzicht ********************* \n");
         System.out.printf("%-10s %-18s %-25s %-10s \n", kolumNaam1, kolumNaam2, kolumNaam3, kolumNaam4);
         System.out.printf("-------------------------------------------------------------------- \n");
 

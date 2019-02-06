@@ -1,6 +1,5 @@
 package net.gekkemarthe.mijncasus;
 
-import java.util.ArrayList;
 
 public class Leverancier {
 
@@ -13,11 +12,11 @@ public class Leverancier {
         this.woonplaats = woonplaats;
     }
 
-    public String getLeverancier() {
-        String concat = "";
-        concat = leverancierCode.concat(" ").concat(leverancierNaam).concat(" ").concat(adres).concat(" ").concat(woonplaats);
-        return concat;
-    }
+//    public String getLeverancier() {
+//        String concat = "";
+//        concat = leverancierCode.concat(" ").concat(leverancierNaam).concat(" ").concat(adres).concat(" ").concat(woonplaats);
+//        return concat;
+//    }
 
     public String getLeverancierCode()
     {

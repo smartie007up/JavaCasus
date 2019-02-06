@@ -21,20 +21,19 @@ public class ViewBestelRegels {
         kolomNaam4 = kolomNaam.getBestelPrijs();
     }
 
-    public void toonBestelRegels (int keuze)
-    {
-            bestelRegels = bestelRegelsFactory.getBestelRegelsVanBestelling(keuze);
+    public void toonBestelRegels (int keuze) {
+        bestelRegels = bestelRegelsFactory.getBestelRegelsVanBestelling(keuze);
 
-            System.out.printf("%-10s %-10s %-10s %-10s \n", kolomNaam1, kolomNaam2, kolomNaam3, kolomNaam4);
-            System.out.printf("------------------------------------------------ \n");
+        System.out.println(" ********************* Bestelregels overzicht ********************* \n");
+        System.out.printf("%-10s %-10s %-10s %-10s \n", kolomNaam1, kolomNaam2, kolomNaam3, kolomNaam4);
+        System.out.printf("------------------------------------------------ \n");
 
-            for (int i = 0; i < bestelRegels.size(); i++) {
-                BestelRegel bes = bestelRegels.get(i);
-                System.out.printf("%-10s %-10s %-10s %-10s \n", bes.getBestelNummer(), bes.getArtikelCode(), bes.getAantal(), bes.getBestelPrijs());
-            }
-            System.out.printf("------------------------------------------------ \n");
+        for (int i = 0; i < bestelRegels.size(); i++) {
+            BestelRegel bes = bestelRegels.get(i);
+            System.out.printf("%-10s %-10s %-10s %-10s \n", bes.getBestelNummer(), bes.getArtikelCode(), bes.getAantal(), bes.getBestelPrijs());
+        }
+        System.out.printf("------------------------------------------------ \n");
     }
-
 
     public boolean magGekozen(int keuze)
     {

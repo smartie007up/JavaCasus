@@ -1,34 +1,13 @@
 package net.gekkemarthe.mijncasus;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ReadInFile
 {
     private ArrayList<String> bestellingen, bestelregels, goed_ontvangst, klanten, leveranciers, planten;
 
-    ReadInFile () throws IOException
-    {
-        bestellingen = readInFile("src/main/resources/bestellingen.csv");
-        bestelregels = readInFile("src/main/resources/bestelregels.csv");
-        goed_ontvangst = readInFile("src/main/resources/goed_ontvangst.csv");
-        klanten = readInFile("src/main/resources/klanten.csv");
-        leveranciers = readInFile("src/main/resources/leveranciers.csv");
-        planten = readInFile("src/main/resources/planten.csv");
-    }
-
-    public ArrayList<String> getInputFile(String pathFile) throws IOException {
-        String result = "";
-        String path = "src/main/resources/";
-        String pathEnd = ".csv";
-        result = path + pathFile + pathEnd;
-        return readInFile(result);
-    }
-
-
-    public ArrayList<String> readInFile (String pathName) throws IOException
-    {
+    public ArrayList<String> readInFile (String pathName) throws IOException {
         ArrayList<String> input = new ArrayList<String>();
         File file = new File(pathName);
         BufferedReader br = null;
@@ -40,7 +19,7 @@ public class ReadInFile
                 input.add(st);
             }
         } catch (FileNotFoundException fnfe) {
-            fnfe.fillInStackTrace();
+            fnfe.printStackTrace();
         } catch (IOException et) {
             et.printStackTrace();
         } finally {
@@ -49,33 +28,33 @@ public class ReadInFile
         return input;
     }
 
-    public ArrayList<String> getLeveranciers ()
-    {
+    public ArrayList<String> getLeveranciers () throws IOException {
+        leveranciers = readInFile("src/main/resources/leveranciers.csv");
         return leveranciers;
     }
 
-    public ArrayList<String> getBestellingen ()
-    {
+    public ArrayList<String> getBestellingen () throws IOException {
+        bestellingen = readInFile("src/main/resources/bestellingen.csv");
         return bestellingen;
     }
 
-    public ArrayList<String> getBestelregels ()
-    {
+    public ArrayList<String> getBestelregels () throws IOException {
+        bestelregels = readInFile("src/main/resources/bestelregels.csv");
         return bestelregels;
     }
 
-    public ArrayList<String> getGoed_ontvangst ()
-    {
+    public ArrayList<String> getGoed_ontvangst () throws IOException {
+        goed_ontvangst = readInFile("src/main/resources/goed_ontvangst.csv");
         return goed_ontvangst;
     }
 
-    public ArrayList<String> getPlanten ()
-    {
+    public ArrayList<String> getPlanten () throws IOException {
+        planten = readInFile("src/main/resources/planten.csv");
         return planten;
     }
 
-    public ArrayList<String> getKlanten ()
-    {
+    public ArrayList<String> getKlanten () throws IOException {
+        klanten = readInFile("src/main/resources/klanten.csv");
         return klanten;
     }
 }
